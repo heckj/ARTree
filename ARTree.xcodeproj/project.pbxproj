@@ -15,6 +15,14 @@
 		1A9AB83B2786697B00AEE6EE /* ARTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB83A2786697B00AEE6EE /* ARTreeTests.swift */; };
 		1A9AB8452786697B00AEE6EE /* ARTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8442786697B00AEE6EE /* ARTreeUITests.swift */; };
 		1A9AB8472786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8462786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift */; };
+		1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */; };
+		1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB85B27866A0100AEE6EE /* ContentView.swift */; };
+		1A9AB85E27866A0200AEE6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AB85D27866A0200AEE6EE /* Assets.xcassets */; };
+		1A9AB86127866A0200AEE6EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AB86027866A0200AEE6EE /* Preview Assets.xcassets */; };
+		1A9AB86C27866A0200AEE6EE /* ARTreeMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB86B27866A0200AEE6EE /* ARTreeMacTests.swift */; };
+		1A9AB87627866A0200AEE6EE /* ARTreeMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */; };
+		1A9AB87827866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */; };
+		1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,20 @@
 			remoteGlobalIDString = 1A9AB8232786697A00AEE6EE;
 			remoteInfo = ARTree;
 		};
+		1A9AB86827866A0200AEE6EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A9AB81C2786697A00AEE6EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A9AB85627866A0100AEE6EE;
+			remoteInfo = ARTreeMac;
+		};
+		1A9AB87227866A0200AEE6EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A9AB81C2786697A00AEE6EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A9AB85627866A0100AEE6EE;
+			remoteInfo = ARTreeMac;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +68,17 @@
 		1A9AB8402786697B00AEE6EE /* ARTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9AB8442786697B00AEE6EE /* ARTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeUITests.swift; sourceTree = "<group>"; };
 		1A9AB8462786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A9AB85727866A0100AEE6EE /* ARTreeMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTreeMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacApp.swift; sourceTree = "<group>"; };
+		1A9AB85B27866A0100AEE6EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A9AB85D27866A0200AEE6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A9AB86027866A0200AEE6EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A9AB86227866A0200AEE6EE /* ARTreeMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARTreeMac.entitlements; sourceTree = "<group>"; };
+		1A9AB86727866A0200AEE6EE /* ARTreeMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTreeMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9AB86B27866A0200AEE6EE /* ARTreeMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacTests.swift; sourceTree = "<group>"; };
+		1A9AB87127866A0200AEE6EE /* ARTreeMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTreeMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacUITests.swift; sourceTree = "<group>"; };
+		1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +103,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A9AB85427866A0100AEE6EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB86427866A0200AEE6EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB86E27866A0200AEE6EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +133,9 @@
 				1A9AB8262786697A00AEE6EE /* ARTree */,
 				1A9AB8392786697B00AEE6EE /* ARTreeTests */,
 				1A9AB8432786697B00AEE6EE /* ARTreeUITests */,
+				1A9AB85827866A0100AEE6EE /* ARTreeMac */,
+				1A9AB86A27866A0200AEE6EE /* ARTreeMacTests */,
+				1A9AB87427866A0200AEE6EE /* ARTreeMacUITests */,
 				1A9AB8252786697A00AEE6EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +146,9 @@
 				1A9AB8242786697A00AEE6EE /* ARTree.app */,
 				1A9AB8362786697B00AEE6EE /* ARTreeTests.xctest */,
 				1A9AB8402786697B00AEE6EE /* ARTreeUITests.xctest */,
+				1A9AB85727866A0100AEE6EE /* ARTreeMac.app */,
+				1A9AB86727866A0200AEE6EE /* ARTreeMacTests.xctest */,
+				1A9AB87127866A0200AEE6EE /* ARTreeMacUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +188,43 @@
 				1A9AB8462786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift */,
 			);
 			path = ARTreeUITests;
+			sourceTree = "<group>";
+		};
+		1A9AB85827866A0100AEE6EE /* ARTreeMac */ = {
+			isa = PBXGroup;
+			children = (
+				1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */,
+				1A9AB85B27866A0100AEE6EE /* ContentView.swift */,
+				1A9AB85D27866A0200AEE6EE /* Assets.xcassets */,
+				1A9AB86227866A0200AEE6EE /* ARTreeMac.entitlements */,
+				1A9AB85F27866A0200AEE6EE /* Preview Content */,
+			);
+			path = ARTreeMac;
+			sourceTree = "<group>";
+		};
+		1A9AB85F27866A0200AEE6EE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1A9AB86027866A0200AEE6EE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A9AB86A27866A0200AEE6EE /* ARTreeMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A9AB86B27866A0200AEE6EE /* ARTreeMacTests.swift */,
+			);
+			path = ARTreeMacTests;
+			sourceTree = "<group>";
+		};
+		1A9AB87427866A0200AEE6EE /* ARTreeMacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */,
+				1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */,
+			);
+			path = ARTreeMacUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +283,59 @@
 			productReference = 1A9AB8402786697B00AEE6EE /* ARTreeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1A9AB85627866A0100AEE6EE /* ARTreeMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9AB87927866A0200AEE6EE /* Build configuration list for PBXNativeTarget "ARTreeMac" */;
+			buildPhases = (
+				1A9AB85327866A0100AEE6EE /* Sources */,
+				1A9AB85427866A0100AEE6EE /* Frameworks */,
+				1A9AB85527866A0100AEE6EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARTreeMac;
+			productName = ARTreeMac;
+			productReference = 1A9AB85727866A0100AEE6EE /* ARTreeMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A9AB86627866A0200AEE6EE /* ARTreeMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9AB87C27866A0200AEE6EE /* Build configuration list for PBXNativeTarget "ARTreeMacTests" */;
+			buildPhases = (
+				1A9AB86327866A0200AEE6EE /* Sources */,
+				1A9AB86427866A0200AEE6EE /* Frameworks */,
+				1A9AB86527866A0200AEE6EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A9AB86927866A0200AEE6EE /* PBXTargetDependency */,
+			);
+			name = ARTreeMacTests;
+			productName = ARTreeMacTests;
+			productReference = 1A9AB86727866A0200AEE6EE /* ARTreeMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A9AB87027866A0200AEE6EE /* ARTreeMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9AB87F27866A0200AEE6EE /* Build configuration list for PBXNativeTarget "ARTreeMacUITests" */;
+			buildPhases = (
+				1A9AB86D27866A0200AEE6EE /* Sources */,
+				1A9AB86E27866A0200AEE6EE /* Frameworks */,
+				1A9AB86F27866A0200AEE6EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A9AB87327866A0200AEE6EE /* PBXTargetDependency */,
+			);
+			name = ARTreeMacUITests;
+			productName = ARTreeMacUITests;
+			productReference = 1A9AB87127866A0200AEE6EE /* ARTreeMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +357,17 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 1A9AB8232786697A00AEE6EE;
 					};
+					1A9AB85627866A0100AEE6EE = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					1A9AB86627866A0200AEE6EE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1A9AB85627866A0100AEE6EE;
+					};
+					1A9AB87027866A0200AEE6EE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1A9AB85627866A0100AEE6EE;
+					};
 				};
 			};
 			buildConfigurationList = 1A9AB81F2786697A00AEE6EE /* Build configuration list for PBXProject "ARTree" */;
@@ -225,6 +386,9 @@
 				1A9AB8232786697A00AEE6EE /* ARTree */,
 				1A9AB8352786697B00AEE6EE /* ARTreeTests */,
 				1A9AB83F2786697B00AEE6EE /* ARTreeUITests */,
+				1A9AB85627866A0100AEE6EE /* ARTreeMac */,
+				1A9AB86627866A0200AEE6EE /* ARTreeMacTests */,
+				1A9AB87027866A0200AEE6EE /* ARTreeMacUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +411,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1A9AB83E2786697B00AEE6EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB85527866A0100AEE6EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9AB86127866A0200AEE6EE /* Preview Assets.xcassets in Resources */,
+				1A9AB85E27866A0200AEE6EE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB86527866A0200AEE6EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB86F27866A0200AEE6EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,6 +470,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A9AB85327866A0100AEE6EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */,
+				1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */,
+				1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB86327866A0200AEE6EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9AB86C27866A0200AEE6EE /* ARTreeMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9AB86D27866A0200AEE6EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9AB87627866A0200AEE6EE /* ARTreeMacUITests.swift in Sources */,
+				1A9AB87827866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -295,6 +509,16 @@
 			isa = PBXTargetDependency;
 			target = 1A9AB8232786697A00AEE6EE /* ARTree */;
 			targetProxy = 1A9AB8412786697B00AEE6EE /* PBXContainerItemProxy */;
+		};
+		1A9AB86927866A0200AEE6EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A9AB85627866A0100AEE6EE /* ARTreeMac */;
+			targetProxy = 1A9AB86827866A0200AEE6EE /* PBXContainerItemProxy */;
+		};
+		1A9AB87327866A0200AEE6EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A9AB85627866A0100AEE6EE /* ARTreeMac */;
+			targetProxy = 1A9AB87227866A0200AEE6EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,6 +777,142 @@
 			};
 			name = Release;
 		};
+		1A9AB87A27866A0200AEE6EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ARTreeMac/ARTreeMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ARTreeMac/Preview Content\"";
+				DEVELOPMENT_TEAM = BDV4VC27D3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhonabwy.ARTreeMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1A9AB87B27866A0200AEE6EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ARTreeMac/ARTreeMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ARTreeMac/Preview Content\"";
+				DEVELOPMENT_TEAM = BDV4VC27D3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhonabwy.ARTreeMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1A9AB87D27866A0200AEE6EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BDV4VC27D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhonabwy.ARTreeMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARTreeMac.app/Contents/MacOS/ARTreeMac";
+			};
+			name = Debug;
+		};
+		1A9AB87E27866A0200AEE6EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BDV4VC27D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhonabwy.ARTreeMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARTreeMac.app/Contents/MacOS/ARTreeMac";
+			};
+			name = Release;
+		};
+		1A9AB88027866A0200AEE6EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BDV4VC27D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhonabwy.ARTreeMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ARTreeMac;
+			};
+			name = Debug;
+		};
+		1A9AB88127866A0200AEE6EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BDV4VC27D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhonabwy.ARTreeMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ARTreeMac;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,6 +948,33 @@
 			buildConfigurations = (
 				1A9AB8512786697B00AEE6EE /* Debug */,
 				1A9AB8522786697B00AEE6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9AB87927866A0200AEE6EE /* Build configuration list for PBXNativeTarget "ARTreeMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9AB87A27866A0200AEE6EE /* Debug */,
+				1A9AB87B27866A0200AEE6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9AB87C27866A0200AEE6EE /* Build configuration list for PBXNativeTarget "ARTreeMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9AB87D27866A0200AEE6EE /* Debug */,
+				1A9AB87E27866A0200AEE6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9AB87F27866A0200AEE6EE /* Build configuration list for PBXNativeTarget "ARTreeMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9AB88027866A0200AEE6EE /* Debug */,
+				1A9AB88127866A0200AEE6EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

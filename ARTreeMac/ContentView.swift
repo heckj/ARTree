@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  ARTree
+//  ARTreeMac
 //
 //  Created by Joseph Heck on 1/5/22.
 //
@@ -14,12 +14,11 @@ struct ContentView : View {
     }
 }
 
-struct ARViewContainer: UIViewRepresentable {
+struct ARViewContainer: NSViewRepresentable {
     
-    func makeUIView(context: Context) -> ARView {
+    func makeNSView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        arView.cameraMode
         
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadBox()
@@ -31,14 +30,12 @@ struct ARViewContainer: UIViewRepresentable {
         
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateNSView(_ uiView: ARView, context: Context) {}
     
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-#endif
