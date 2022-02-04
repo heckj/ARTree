@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A78734C27AD9FC00065D677 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1A78734B27AD9FC00065D677 /* Dice.usdz */; };
+		1A78734D27AD9FC00065D677 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1A78734B27AD9FC00065D677 /* Dice.usdz */; };
 		1A9AB8282786697A00AEE6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8272786697A00AEE6EE /* AppDelegate.swift */; };
 		1A9AB82A2786697A00AEE6EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8292786697A00AEE6EE /* ContentView.swift */; };
 		1A9AB82C2786697A00AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
@@ -23,6 +25,8 @@
 		1A9AB87627866A0200AEE6EE /* ARTreeMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */; };
 		1A9AB87827866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */; };
 		1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
+		1AF97E6727ACBBCA00A224B2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF97E6627ACBBCA00A224B2 /* FocusEntity */; };
+		1AF97E6A27ACBBE100A224B2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF97E6927ACBBE100A224B2 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A78734B27AD9FC00065D677 /* Dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Dice.usdz; sourceTree = "<group>"; };
 		1A9AB8242786697A00AEE6EE /* ARTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9AB8272786697A00AEE6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A9AB8292786697A00AEE6EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF97E6727ACBBCA00A224B2 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF97E6A27ACBBE100A224B2 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +144,7 @@
 				1A9AB86A27866A0200AEE6EE /* ARTreeMacTests */,
 				1A9AB87427866A0200AEE6EE /* ARTreeMacUITests */,
 				1A9AB8252786697A00AEE6EE /* Products */,
+				1AF97E6827ACBBE100A224B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +168,7 @@
 				1A9AB8292786697A00AEE6EE /* ContentView.swift */,
 				1A9AB82B2786697A00AEE6EE /* Experience.rcproject */,
 				1A9AB82D2786697B00AEE6EE /* Assets.xcassets */,
+				1A78734B27AD9FC00065D677 /* Dice.usdz */,
 				1A9AB82F2786697B00AEE6EE /* Preview Content */,
 			);
 			path = ARTree;
@@ -227,6 +236,13 @@
 			path = ARTreeMacUITests;
 			sourceTree = "<group>";
 		};
+		1AF97E6827ACBBE100A224B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +259,9 @@
 			dependencies = (
 			);
 			name = ARTree;
+			packageProductDependencies = (
+				1AF97E6627ACBBCA00A224B2 /* FocusEntity */,
+			);
 			productName = ARTree;
 			productReference = 1A9AB8242786697A00AEE6EE /* ARTree.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +315,9 @@
 			dependencies = (
 			);
 			name = ARTreeMac;
+			packageProductDependencies = (
+				1AF97E6927ACBBE100A224B2 /* FocusEntity */,
+			);
 			productName = ARTreeMac;
 			productReference = 1A9AB85727866A0100AEE6EE /* ARTreeMac.app */;
 			productType = "com.apple.product-type.application";
@@ -344,7 +366,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					1A9AB8232786697A00AEE6EE = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -379,6 +401,9 @@
 				Base,
 			);
 			mainGroup = 1A9AB81B2786697A00AEE6EE;
+			packageReferences = (
+				1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 1A9AB8252786697A00AEE6EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -400,6 +425,7 @@
 			files = (
 				1A9AB8312786697B00AEE6EE /* Preview Assets.xcassets in Resources */,
 				1A9AB82E2786697B00AEE6EE /* Assets.xcassets in Resources */,
+				1A78734C27AD9FC00065D677 /* Dice.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +449,7 @@
 			files = (
 				1A9AB86127866A0200AEE6EE /* Preview Assets.xcassets in Resources */,
 				1A9AB85E27866A0200AEE6EE /* Assets.xcassets in Resources */,
+				1A78734D27AD9FC00065D677 /* Dice.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +677,7 @@
 				DEVELOPMENT_TEAM = BDV4VC27D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Displaying AR content.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -681,7 +708,7 @@
 				DEVELOPMENT_TEAM = BDV4VC27D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Displaying AR content.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -783,6 +810,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ARTreeMac/ARTreeMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -812,6 +840,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ARTreeMac/ARTreeMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -980,6 +1009,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AF97E6627ACBBCA00A224B2 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+		1AF97E6927ACBBE100A224B2 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A9AB81C2786697A00AEE6EE /* Project object */;
 }

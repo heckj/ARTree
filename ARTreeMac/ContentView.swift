@@ -19,6 +19,8 @@ struct ARViewContainer: NSViewRepresentable {
     func makeNSView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
+        // NOTE(heckj): Controlling the view will require tracking
+        // mouse input and transforming the camera view appropriately.
         
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadBox()
