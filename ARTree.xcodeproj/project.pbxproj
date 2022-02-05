@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A78734C27AD9FC00065D677 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1A78734B27AD9FC00065D677 /* Dice.usdz */; };
 		1A78734D27AD9FC00065D677 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1A78734B27AD9FC00065D677 /* Dice.usdz */; };
+		1A7EE58827AF252100F4C208 /* ARTreeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */; };
+		1A90886C27ADE96E00D824A6 /* MeshGenerator in Frameworks */ = {isa = PBXBuildFile; productRef = 1A90886B27ADE96E00D824A6 /* MeshGenerator */; };
 		1A9AB8282786697A00AEE6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8272786697A00AEE6EE /* AppDelegate.swift */; };
 		1A9AB82A2786697A00AEE6EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8292786697A00AEE6EE /* ContentView.swift */; };
 		1A9AB82C2786697A00AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
@@ -26,7 +28,6 @@
 		1A9AB87827866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */; };
 		1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
 		1AF97E6727ACBBCA00A224B2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF97E6627ACBBCA00A224B2 /* FocusEntity */; };
-		1AF97E6A27ACBBE100A224B2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF97E6927ACBBE100A224B2 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		1A78734B27AD9FC00065D677 /* Dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Dice.usdz; sourceTree = "<group>"; };
+		1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeAppDelegate.swift; sourceTree = "<group>"; };
 		1A9AB8242786697A00AEE6EE /* ARTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9AB8272786697A00AEE6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A9AB8292786697A00AEE6EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF97E6727ACBBCA00A224B2 /* FocusEntity in Frameworks */,
+				1A90886C27ADE96E00D824A6 /* MeshGenerator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AF97E6A27ACBBE100A224B2 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */,
+				1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */,
 				1A9AB85B27866A0100AEE6EE /* ContentView.swift */,
 				1A9AB85D27866A0200AEE6EE /* Assets.xcassets */,
 				1A9AB86227866A0200AEE6EE /* ARTreeMac.entitlements */,
@@ -261,6 +264,7 @@
 			name = ARTree;
 			packageProductDependencies = (
 				1AF97E6627ACBBCA00A224B2 /* FocusEntity */,
+				1A90886B27ADE96E00D824A6 /* MeshGenerator */,
 			);
 			productName = ARTree;
 			productReference = 1A9AB8242786697A00AEE6EE /* ARTree.app */;
@@ -316,7 +320,6 @@
 			);
 			name = ARTreeMac;
 			packageProductDependencies = (
-				1AF97E6927ACBBE100A224B2 /* FocusEntity */,
 			);
 			productName = ARTreeMac;
 			productReference = 1A9AB85727866A0100AEE6EE /* ARTreeMac.app */;
@@ -403,6 +406,7 @@
 			mainGroup = 1A9AB81B2786697A00AEE6EE;
 			packageReferences = (
 				1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				1A90886A27ADE96E00D824A6 /* XCRemoteSwiftPackageReference "MeshGenerator" */,
 			);
 			productRefGroup = 1A9AB8252786697A00AEE6EE /* Products */;
 			projectDirPath = "";
@@ -502,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */,
+				1A7EE58827AF252100F4C208 /* ARTreeAppDelegate.swift in Sources */,
 				1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */,
 				1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */,
 			);
@@ -1011,6 +1016,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1A90886A27ADE96E00D824A6 /* XCRemoteSwiftPackageReference "MeshGenerator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heckj/MeshGenerator";
+			requirement = {
+				branch = export;
+				kind = branch;
+			};
+		};
 		1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
@@ -1022,12 +1035,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1AF97E6627ACBBCA00A224B2 /* FocusEntity */ = {
+		1A90886B27ADE96E00D824A6 /* MeshGenerator */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */;
-			productName = FocusEntity;
+			package = 1A90886A27ADE96E00D824A6 /* XCRemoteSwiftPackageReference "MeshGenerator" */;
+			productName = MeshGenerator;
 		};
-		1AF97E6927ACBBE100A224B2 /* FocusEntity */ = {
+		1AF97E6627ACBBCA00A224B2 /* FocusEntity */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1AF97E6527ACBBCA00A224B2 /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
