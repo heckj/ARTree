@@ -10,6 +10,7 @@
 		1A78734C27AD9FC00065D677 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1A78734B27AD9FC00065D677 /* Dice.usdz */; };
 		1A78734D27AD9FC00065D677 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1A78734B27AD9FC00065D677 /* Dice.usdz */; };
 		1A7EE58827AF252100F4C208 /* ARTreeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */; };
+		1A7EE58A27AF37C900F4C208 /* ClickGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EE58927AF37C900F4C208 /* ClickGesture.swift */; };
 		1A90886C27ADE96E00D824A6 /* MeshGenerator in Frameworks */ = {isa = PBXBuildFile; productRef = 1A90886B27ADE96E00D824A6 /* MeshGenerator */; };
 		1A9AB8282786697A00AEE6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8272786697A00AEE6EE /* AppDelegate.swift */; };
 		1A9AB82A2786697A00AEE6EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8292786697A00AEE6EE /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1A78734B27AD9FC00065D677 /* Dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Dice.usdz; sourceTree = "<group>"; };
 		1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeAppDelegate.swift; sourceTree = "<group>"; };
+		1A7EE58927AF37C900F4C208 /* ClickGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickGesture.swift; sourceTree = "<group>"; };
 		1A9AB8242786697A00AEE6EE /* ARTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9AB8272786697A00AEE6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A9AB8292786697A00AEE6EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */,
 				1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */,
 				1A9AB85B27866A0100AEE6EE /* ContentView.swift */,
+				1A7EE58927AF37C900F4C208 /* ClickGesture.swift */,
 				1A9AB85D27866A0200AEE6EE /* Assets.xcassets */,
 				1A9AB86227866A0200AEE6EE /* ARTreeMac.entitlements */,
 				1A9AB85F27866A0200AEE6EE /* Preview Content */,
@@ -505,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7EE58A27AF37C900F4C208 /* ClickGesture.swift in Sources */,
 				1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */,
 				1A7EE58827AF252100F4C208 /* ARTreeAppDelegate.swift in Sources */,
 				1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */,
