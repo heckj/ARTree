@@ -28,6 +28,7 @@
 		1A9AB87627866A0200AEE6EE /* ARTreeMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */; };
 		1A9AB87827866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */; };
 		1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
+		1AAE2F8027B1A3E700DF90C8 /* CameraControlARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE2F7F27B1A3E700DF90C8 /* CameraControlARView.swift */; };
 		1AF97E6727ACBBCA00A224B2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF97E6627ACBBCA00A224B2 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		1A9AB87127866A0200AEE6EE /* ARTreeMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTreeMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacUITests.swift; sourceTree = "<group>"; };
 		1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1AAE2F7F27B1A3E700DF90C8 /* CameraControlARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlARView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */,
 				1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */,
 				1A9AB85B27866A0100AEE6EE /* ContentView.swift */,
+				1AAE2F7F27B1A3E700DF90C8 /* CameraControlARView.swift */,
 				1A7EE58927AF37C900F4C208 /* ClickGesture.swift */,
 				1A9AB85D27866A0200AEE6EE /* Assets.xcassets */,
 				1A9AB86227866A0200AEE6EE /* ARTreeMac.entitlements */,
@@ -509,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7EE58A27AF37C900F4C208 /* ClickGesture.swift in Sources */,
+				1AAE2F8027B1A3E700DF90C8 /* CameraControlARView.swift in Sources */,
 				1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */,
 				1A7EE58827AF252100F4C208 /* ARTreeAppDelegate.swift in Sources */,
 				1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */,

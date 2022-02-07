@@ -56,11 +56,19 @@ struct ContentView : View {
             }
             ARViewContainer(cameraTransform: $aTransform)
                 .edgesIgnoringSafeArea(.all)
-                .highPriorityGesture(drag)
+//                .highPriorityGesture(drag)
                 .simultaneousGesture(magnification)
-                .onTapGesture {
-                    print("TAPPED IN VIEW")
-                }
+//                .highPriorityGesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+//                    .onChanged({ value in
+//                        print("drag onChanged: \(value)")
+//                    })
+//                    .onEnded({ value in
+//                        print("drag onEnded: \(value)")
+//                    })
+//                )
+//                .onTapGesture {
+//                    print("TAPPED IN VIEW")
+//                }
         }
     }
 }
@@ -98,7 +106,13 @@ struct ARViewContainer: NSViewRepresentable {
         // - transaction
         // - environment
         
-        let arView = ARView(frame: .zero)
+        let arView = CameraControlARView(frame: .zero)
+        
+        // NOTE(heckj): I think in order to sort the event handling, I'm going to have to consider subclassing
+        // ARView from RealityKit and adding my own mouse/event handling mechanisms. While some gesture capture appears
+        // to be working from above this view (in SwiftUI land), taps, drags, etc aren't being reflected. I don't know
+        // if I'm screwing up the gesture in SwiftUI, or if the ARView is consuming, and disposing, of the views before they get
+        // "up" to SwiftUI.
         
         context.coordinator.view = arView
         // Set debug options
