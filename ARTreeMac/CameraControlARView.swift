@@ -1,6 +1,5 @@
 //
 //  CameraControlARView.swift
-//  ARTreeMac
 //
 //  Created by Joseph Heck on 2/7/22.
 //
@@ -8,10 +7,24 @@
 import RealityKit
 import Cocoa
 
+/// An augmented reality view for macOS that provides keyboard and mouse movement controls for the camera within the view.
 @objc public class CameraControlARView: ARView, ObservableObject {
     
+    /// The mode of camera motion within the augmented reality scene.
     public enum MotionMode: Int {
+        /// Rotate around a target location, effectively orbiting and keeping the camera trained on it.
+        ///
+        /// Drag motions:
+        /// - The view converts vertical drag distance into an inclination above, or below, the target location, clamped to directly above and below it.
+        /// - The view converts horizontal drag distance into a rotational angle, orbiting the target location.
+        ///
+        /// Keyboard motions:
+        /// - The right-arrow and `d` keys rotate the camera to the right around the location.
+        /// - The left-arrow and `a` keys rotate the camera to the left around the location.
+        /// - the up-arrow and `w` keys rotate the camera upward around the location, clamped to a maximum of directly above the location.
+        /// - the down-arrow and `s` keys rotate the camera downward around the location, clamped to a minimum of directly below the location.
         case arcball
+        /// Free motion within the AR scene, not locked to a location.
         case firstperson
     }
     
@@ -61,6 +74,7 @@ import Cocoa
     private var dragstart: NSPoint
     private var dragstart_rotation: Float
     private var dragstart_inclination: Float
+    private var magnify_start: Float
     /// A copy of the basic transform applied ot the camera, and updated in parallel to reflect "upward" to SwiftUI.
     @Published var macOSCameraTransform: Transform
     
@@ -76,6 +90,7 @@ import Cocoa
         dragstart = NSPoint.zero
         dragstart_rotation = 0
         dragstart_inclination = 0
+        magnify_start = radius
         // reflect the camera's transform as an observed object
         macOSCameraTransform = cameraAnchor.transform
         super.init(frame: frameRect)
@@ -121,7 +136,7 @@ import Cocoa
     }
     
     override dynamic open func mouseDown(with event: NSEvent) {
-        //        print("mouseDown EVENT: \(event)")
+                print("mouseDown EVENT: \(event)")
         //        print(" at \(event.locationInWindow) of \(self.frame)")
         dragstart = event.locationInWindow
         dragstart_rotation = rotationAngle
@@ -224,7 +239,24 @@ import Cocoa
     }
     
     override dynamic open func magnify(with event: NSEvent) {
-        print("magnify: \(event)")
+        if event.phase == NSEvent.Phase.ended {
+            print("magnify: \(event)")
+        }
+//        print("magnify: \(event)")
+        switch motionMode {
+        case .arcball:
+            if event.phase == NSEvent.Phase.began {
+                magnify_start = Float(event.magnification)
+                print("magnify: \(event)")
+            }
+            let multiplier = Float(event.magnification) / magnify_start
+            print("Multiplier is \(multiplier)")
+            radius = 2 * multiplier
+            print("radius updated to \(radius)")
+            updateCamera()
+        case .firstperson:
+            break
+        }
     }
     
     //    override dynamic open func rotate(with event: NSEvent) {
