@@ -21,7 +21,7 @@
 		1A9AB8452786697B00AEE6EE /* ARTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8442786697B00AEE6EE /* ARTreeUITests.swift */; };
 		1A9AB8472786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB8462786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift */; };
 		1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */; };
-		1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB85B27866A0100AEE6EE /* ContentView.swift */; };
+		1A9AB85C27866A0100AEE6EE /* ARContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB85B27866A0100AEE6EE /* ARContentView.swift */; };
 		1A9AB85E27866A0200AEE6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AB85D27866A0200AEE6EE /* Assets.xcassets */; };
 		1A9AB86127866A0200AEE6EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AB86027866A0200AEE6EE /* Preview Assets.xcassets */; };
 		1A9AB86C27866A0200AEE6EE /* ARTreeMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB86B27866A0200AEE6EE /* ARTreeMacTests.swift */; };
@@ -29,6 +29,7 @@
 		1A9AB87827866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */; };
 		1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB82B2786697A00AEE6EE /* Experience.rcproject */; };
 		1AAE2F8027B1A3E700DF90C8 /* CameraControlARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE2F7F27B1A3E700DF90C8 /* CameraControlARView.swift */; };
+		1AD6A9AB27B1FE6700C42ADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6A9AA27B1FE6700C42ADC /* ContentView.swift */; };
 		1AF97E6727ACBBCA00A224B2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 1AF97E6627ACBBCA00A224B2 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +81,7 @@
 		1A9AB8462786697B00AEE6EE /* ARTreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A9AB85727866A0100AEE6EE /* ARTreeMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTreeMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacApp.swift; sourceTree = "<group>"; };
-		1A9AB85B27866A0100AEE6EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A9AB85B27866A0100AEE6EE /* ARContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContentView.swift; sourceTree = "<group>"; };
 		1A9AB85D27866A0200AEE6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A9AB86027866A0200AEE6EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A9AB86227866A0200AEE6EE /* ARTreeMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARTreeMac.entitlements; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		1A9AB87527866A0200AEE6EE /* ARTreeMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacUITests.swift; sourceTree = "<group>"; };
 		1A9AB87727866A0200AEE6EE /* ARTreeMacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTreeMacUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1AAE2F7F27B1A3E700DF90C8 /* CameraControlARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlARView.swift; sourceTree = "<group>"; };
+		1AD6A9AA27B1FE6700C42ADC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +212,8 @@
 			children = (
 				1A9AB85927866A0100AEE6EE /* ARTreeMacApp.swift */,
 				1A7EE58727AF252100F4C208 /* ARTreeAppDelegate.swift */,
-				1A9AB85B27866A0100AEE6EE /* ContentView.swift */,
+				1A9AB85B27866A0100AEE6EE /* ARContentView.swift */,
+				1AD6A9AA27B1FE6700C42ADC /* ContentView.swift */,
 				1AAE2F7F27B1A3E700DF90C8 /* CameraControlARView.swift */,
 				1A7EE58927AF37C900F4C208 /* ClickGesture.swift */,
 				1A9AB85D27866A0200AEE6EE /* Assets.xcassets */,
@@ -513,7 +516,8 @@
 			files = (
 				1A7EE58A27AF37C900F4C208 /* ClickGesture.swift in Sources */,
 				1AAE2F8027B1A3E700DF90C8 /* CameraControlARView.swift in Sources */,
-				1A9AB85C27866A0100AEE6EE /* ContentView.swift in Sources */,
+				1AD6A9AB27B1FE6700C42ADC /* ContentView.swift in Sources */,
+				1A9AB85C27866A0100AEE6EE /* ARContentView.swift in Sources */,
 				1A7EE58827AF252100F4C208 /* ARTreeAppDelegate.swift in Sources */,
 				1A9AB85A27866A0100AEE6EE /* ARTreeMacApp.swift in Sources */,
 				1A9AB88227866AD500AEE6EE /* Experience.rcproject in Sources */,
