@@ -56,6 +56,9 @@ struct ARViewContainer: NSViewRepresentable {
             //            .none
         ]
 #endif
+        
+        // Switch to first-person movement mode
+//        arView.motionMode = .firstperson
                 
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadBox()
