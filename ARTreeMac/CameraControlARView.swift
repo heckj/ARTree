@@ -48,27 +48,51 @@ import Cocoa
     /// - ``MotionMode-swift.enum/arcball`` rotates around a specific target location, effectively orbiting and keeping the camera trained on that location.
     /// - ``MotionMode-swift.enum/firstperson`` moves freely in all axis within the world space, not locked to any location.
     ///
-    var motionMode: MotionMode
+    public var motionMode: MotionMode
     
     // TODO: consider encapsulating all these values into a single struct to allow for assigning consolidated values.
     
     // MARK: - ARCBALL mode variables
     /// The target for the camera when in arcball mode.
-    var arcballTarget: simd_float3
+    public var arcballTarget: simd_float3 {
+        didSet {
+            if motionMode == .arcball {
+                updateCamera()
+            }
+        }
+    }
     /// The angle of inclination of the camera when in arcball mode.
-    var inclinationAngle: Float
+    public var inclinationAngle: Float {
+        didSet {
+            if motionMode == .arcball {
+                updateCamera()
+            }
+        }
+    }
     /// The angle of rotation of the camera when in arcball mode.
-    var rotationAngle: Float
+    public var rotationAngle: Float {
+        didSet {
+            if motionMode == .arcball {
+                updateCamera()
+            }
+        }
+    }
     /// The camera's orbital distance from the target when in arcball mode.
-    var radius: Float
+    public var radius: Float {
+        didSet {
+            if motionMode == .arcball {
+                updateCamera()
+            }
+        }
+    }
     
     /// The speed at which drag operations map percentage of movement within the view to rotational or positional updates.
-    var dragspeed: Float
+    public var dragspeed: Float
     
     /// The speed at which keypresses change the angles of inclination or rotation.
     ///
     /// This view doubles the speed valuewhen the key is held-down.
-    var keyspeed: Float
+    public var keyspeed: Float
     
     private var dragstart: NSPoint
     private var dragstart_rotation: Float
@@ -76,13 +100,21 @@ import Cocoa
     private var magnify_start: Float
     
     // MARK: - FPS mode variables
-    var forward_speed: Float
-    var turn_speed: Float
+    public var forward_speed: Float
+    public var turn_speed: Float
     private var dragstart_transform: matrix_float4x4
     private let sixtydegrees = Float.pi/3
+    public var camera_transform: matrix_float4x4 {
+        get {
+            self.cameraAnchor.transform.matrix
+        }
+        set {
+            self.cameraAnchor.transform = Transform(matrix: newValue)
+        }
+    }
 
     /// A reference to the camera anchor entity for moving, or reading the location values, for the camera.
-    var cameraAnchor: AnchorEntity
+    public var cameraAnchor: AnchorEntity
     /// A copy of the basic transform applied ot the camera, and updated in parallel to reflect "upward" to SwiftUI.
     @Published var macOSCameraTransform: Transform
     
@@ -195,7 +227,7 @@ import Cocoa
         return rotated_heading
     }
 
-    @MainActor func updateCamera() {
+    @MainActor private func updateCamera() {
         switch motionMode {
         case .arcball:
             let translationTransform = Transform(scale: .one,
