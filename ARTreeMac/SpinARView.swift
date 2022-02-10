@@ -223,24 +223,43 @@ struct SpinARView : View {
                                         .sink(receiveCompletion: { loadCompletion in
                                                 print("completion: \(loadCompletion)")
                                             }, receiveValue: { entity in
+                                                print("received entity from load: \(entity)")
+                                                let bounds = entity.visualBounds(relativeTo: nil)
+                                                let max_distance = max(bounds.max.x, bounds.max.y, bounds.max.z)
+                                                arView.radius = max_distance*1.2+1 // smidge of padding
+                                                print("Setting radius to \(max_distance*1.2) from bounds: \(bounds)")
                                                 let originAnchor = AnchorEntity(world: simd_float3(0,0,0))
                                                 originAnchor.addChild(entity)
                                                 arView.scene.anchors.append(originAnchor)
                                             }).store(in: &load_cancellables)
+                                /*
+                                 Error provided: nil
+                                 Data provided: 33 bytes
+                                 Path resolved from data: file:///.file/id=6571367.64059780
+                                 URL resolved from path: file:///Users/heckj/Desktop/fish_sardine.usdz
+                                 Warning (secondary thread): in AppendProperty at line 859 of sdf/path.cpp -- Can only append a property 'preliminary:anchoring:type' to a prim path (/)
+                                 Warning (secondary thread): in AppendProperty at line 859 of sdf/path.cpp -- Can only append a property 'triggers' to a prim path (/)
+                                 completion: finished
+
+                                 
+                                 When loading Dice.usdz:
+                                 received entity from load: ▿ '/' : Entity, children: 1
+                                   ⟐ Transform
+                                   ⟐ SynchronizationComponent
+                                   ▿ 'Dice' : Entity, children: 1
+                                     ⟐ Transform
+                                     ⟐ SynchronizationComponent
+                                     ▿ 'Die_3D_print_model' : ModelEntity
+                                       ⟐ ModelComponent
+                                       ⟐ Transform
+                                       ⟐ SynchronizationComponent
+
+
+                                 */
                             }
                         }
                     }
                     return true
-                    
-                    /*
-                     item.loadItem(forTypeIdentifier: "public.file-url", options: nil) { (urlData, error) in
-                                         DispatchQueue.main.async {
-                                             if let urlData = urlData as? Data {
-                                                 self.imageUrls[gridPosition] = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
-                                             }
-                                         }
-                                     }
-                     */
                 }
 
         }
