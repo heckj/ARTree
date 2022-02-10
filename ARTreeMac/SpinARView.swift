@@ -20,29 +20,23 @@ struct SpinARView : View {
         
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
-        arView.radius = 1.2
         return arView
     }()
-    @State var debugEnabled = false
+    @State private var debugEnabled = false
 
-    @State var cancellables: Set<AnyCancellable> = []
-    @State var snapshots: [NSImage] = []
-    @State var name_for_file: String = ""
-    @State var frames_per_second: Int = 20
+    @State private var cancellables: Set<AnyCancellable> = []
+    @State private var load_cancellables: Set<AnyCancellable> = []
+    @State private var snapshots: [NSImage] = []
+    @State private var name_for_file: String = ""
+    @State private var frames_per_second: Int = 20
+    
+    @State private var dragOver = false
     
     func animatedGifFromImages(images: [NSImage], filename: String, frameDelay: Double) -> Bool {
         let directory_url = FileManager.default.urls(for: .documentDirectory,
                                             in: .userDomainMask)[0]
             
         let url = directory_url.appendingPathComponent("/\(filename).gif") as CFURL
-        
-//        // NSSerachPathForDirectories results in app-specific document container
-//        guard let path = NSSearchPathForDirectoriesInDomains(
-//            .documentDirectory,
-//            .userDomainMask, true).last?.appending() else {
-//                return false
-//            }
-        //        let url = URL(fileURLWithPath: path) as CFURL
 
         let prep = [kCGImagePropertyGIFDictionary as String :
                [kCGImagePropertyGIFDelayTime as String : frameDelay]] as CFDictionary
@@ -99,8 +93,10 @@ struct SpinARView : View {
                     }
                 }
                 Button {
-//                    print(".")
-                    let rotation_publisher = stride(from: 0.0, through: (Float.pi*2), by: 0.05).publisher
+                    let rotation_publisher = stride(
+                        from: arView.rotationAngle,
+                        through: (arView.rotationAngle+Float.pi*2),
+                        by: 0.05).publisher
                     rotation_publisher
                         .zip(timer)
                         .map { (floatval, timerval) in
@@ -140,7 +136,11 @@ struct SpinARView : View {
                     Image(systemName: "clear")
                 }
                 Text("Images captured: \(snapshots.count)")
-                TextField("name for the animated gif", text: $name_for_file)
+            }
+
+            HStack {
+                TextField("animated gif name", text: $name_for_file)
+                    .frame(minWidth: 20, maxWidth: 150)
                 HStack {
                     Text("at \(frames_per_second) fps")
                     VStack {
@@ -177,11 +177,72 @@ struct SpinARView : View {
                     Image(systemName: "square.and.arrow.down")
                 }
             }
-            .padding([.horizontal, .top])
+            
             ARViewContainer(cameraARView: arView)
+                .frame(width: 300, height: 200, alignment: .center)
                 .onAppear() {
                     arView.inclinationAngle = -Float.pi/6 // 30°
+                    arView.radius = 0.5
+                    arView.arcballTarget = simd_float3(0,0,0)
                 }
+                .onDrop(of: [UTType.fileURL], isTargeted: $dragOver) { providers in
+                    print("Dropped info contained \(providers.count) providers.")
+                    guard let firstitem = providers.first else {
+                        return false
+                    }
+                    print("Type identifiers for dropped element: \(firstitem.registeredTypeIdentifiers)")
+
+                    // maybe loadItem? \/
+//                    providers.first?.loadDataRepresentation(forTypeIdentifier: UTType.fileURL.identifier, completionHandler: { (data, error) in
+//                        if let data = data, let path = NSString(data: data, encoding: 4), let url = URL(string: path as String) {
+//                            print("Error provided: \(error)")
+//                            print("Data provided: \(data)")
+//                            print("Path resolved from data: \(path)")
+//                            print("URL resolved from path: \(url)")
+////                                                let image = NSImage(contentsOf: url)
+////                                                DispatchQueue.main.async {
+////                                                    self.image = image
+////                                                }
+//                        }
+//
+//                    })
+                    
+                    firstitem.loadItem(forTypeIdentifier: "public.file-url", options: nil) {
+                        (urlData, error) in
+                        print("Error provided: \(String(describing: error))")
+                        if let data = urlData as? Data,
+                            let path = String(data: data, encoding: .utf8),
+                            let url = URL(string: path) {
+                                print("Data provided: \(data)")
+                                print("Path resolved from data: \(path)")
+                                print("URL resolved from path: \(url)")
+                            
+                            DispatchQueue.main.async {
+                                Entity.loadAsync(contentsOf: url)
+                                        .receive(on: RunLoop.main)
+                                        .sink(receiveCompletion: { loadCompletion in
+                                                print("completion: \(loadCompletion)")
+                                            }, receiveValue: { entity in
+                                                let originAnchor = AnchorEntity(world: simd_float3(0,0,0))
+                                                originAnchor.addChild(entity)
+                                                arView.scene.anchors.append(originAnchor)
+                                            }).store(in: &load_cancellables)
+                            }
+                        }
+                    }
+                    return true
+                    
+                    /*
+                     item.loadItem(forTypeIdentifier: "public.file-url", options: nil) { (urlData, error) in
+                                         DispatchQueue.main.async {
+                                             if let urlData = urlData as? Data {
+                                                 self.imageUrls[gridPosition] = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
+                                             }
+                                         }
+                                     }
+                     */
+                }
+
         }
     }
 }
