@@ -15,11 +15,11 @@ struct SpinARView : View {
     @StateObject private var arView: CameraControlARView = {
         let arView = CameraControlARView(frame: .zero)
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+//        // Load the "Box" scene from the "Experience" Reality File
+//        let boxAnchor = try! Experience.loadBox()
+//
+//        // Add the box anchor to the scene
+//        arView.scene.anchors.append(boxAnchor)
         return arView
     }()
     @State private var debugEnabled = false
@@ -226,8 +226,8 @@ struct SpinARView : View {
                                                 print("received entity from load: \(entity)")
                                                 let bounds = entity.visualBounds(relativeTo: nil)
                                                 let max_distance = max(bounds.max.x, bounds.max.y, bounds.max.z)
-                                                arView.radius = max_distance*1.2+1 // smidge of padding
-                                                print("Setting radius to \(max_distance*1.2) from bounds: \(bounds)")
+                                                arView.radius = max_distance*2 //+1 // smidge of padding
+                                                print("Setting radius to \(max_distance*2) from bounds: \(bounds)")
                                                 let originAnchor = AnchorEntity(world: simd_float3(0,0,0))
                                                 originAnchor.addChild(entity)
                                                 arView.scene.anchors.append(originAnchor)
@@ -253,8 +253,6 @@ struct SpinARView : View {
                                        ⟐ ModelComponent
                                        ⟐ Transform
                                        ⟐ SynchronizationComponent
-
-
                                  */
                             }
                         }

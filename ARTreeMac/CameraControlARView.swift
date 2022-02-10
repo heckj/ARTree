@@ -437,20 +437,14 @@ import Cocoa
     }
     
     override dynamic open func magnify(with event: NSEvent) {
-        if event.phase == NSEvent.Phase.ended {
-            print("magnify: \(event)")
-        }
-//        print("magnify: \(event)")
+//        if event.phase == NSEvent.Phase.ended {
+//            print("magnify: \(event)")
+//        }
         switch motionMode {
         case .arcball:
-            if event.phase == NSEvent.Phase.began {
-                magnify_start = Float(event.magnification)
-                print("magnify: \(event)")
-            }
-            let multiplier = Float(event.magnification) / magnify_start
-            print("Multiplier is \(multiplier)")
-            radius = 2 * multiplier
-            print("radius updated to \(radius)")
+            let multiplier = Float(event.magnification) // magnify_end
+            radius = radius * (multiplier + 1)
+//            print("radius set to \(radius)")
             updateCamera()
         case .firstperson:
             break
